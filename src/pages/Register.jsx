@@ -13,7 +13,8 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     setLoading(true);
-    e.preventDefault();
+    e.preventDefault();// as we dont want to refresh the page on submission
+    
     const displayName = e.target[0].value;
     const email = e.target[1].value;
     const password = e.target[2].value;
