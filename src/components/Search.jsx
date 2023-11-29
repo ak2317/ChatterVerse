@@ -48,7 +48,7 @@ const Search = () => {
     try {
       const res = await getDoc(doc(db, "chats", combinedId));
 
-      if (!res.exists()) {
+      if (!res.exists()) {  //exist() is a firebase function.
         //create a chat in chats collection
         await setDoc(doc(db, "chats", combinedId), { messages: [] });
 
